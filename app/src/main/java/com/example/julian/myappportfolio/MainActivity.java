@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -12,6 +14,47 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+    }
+
+
+    public String toastMessage(String appName){
+        String toastText = "This button will launch my " + appName + " app!";
+        return toastText ;
+    }
+
+    public void displayToast(String appName){
+        Toast toast = Toast.makeText(getApplicationContext(),toastMessage(appName),Toast.LENGTH_SHORT);
+        toast.show();
+    }
+
+
+    public void showToast(View view){
+        switch (view.getId()){
+            case R.id.media_streamer:
+                displayToast("Spotify Streamer");
+                break;
+
+            case R.id.super_duo1:
+                displayToast("Scores App");
+                break;
+
+            case R.id.super_duo2:
+                displayToast("Library App");
+                break;
+
+            case R.id.ant_terminator:
+                displayToast("Build it Bigger");
+                break;
+
+            case R.id.materialize:
+                displayToast("XYZ Reader");
+                break;
+
+            case R.id.capstone:
+                displayToast("Capstone");
+                break;
+        }
     }
 
     @Override

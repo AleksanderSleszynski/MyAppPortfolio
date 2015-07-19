@@ -20,47 +20,59 @@
         android:layout_marginBottom="24dp"/>
 
     <Button
+        android:id="@+id/media_streamer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/media_streamer"
         style="@style/ButtonStyle"
-        android:background="@color/button"/>
+        android:background="@color/button"
+        android:onClick="showToast"/>
 
     <Button
+        android:id="@+id/super_duo1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/super_duo1"
         android:background="@color/button"
-        style="@style/ButtonStyle"/>
+        style="@style/ButtonStyle"
+        android:onClick="showToast"/>
 
     <Button
+        android:id="@+id/super_duo2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/super_duo2"
         android:background="@color/button"
-        style="@style/ButtonStyle"/>
+        style="@style/ButtonStyle"
+        android:onClick="showToast"/>
 
     <Button
+        android:id="@+id/ant_terminator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/ant_terminator"
         android:background="@color/button"
-        style="@style/ButtonStyle"/>
+        style="@style/ButtonStyle"
+        android:onClick="showToast"/>
 
     <Button
+        android:id="@+id/materialize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/materialize"
         style="@style/ButtonStyle"
-        android:background="@color/button"/>
+        android:background="@color/button"
+        android:onClick="showToast"/>
 
     <Button
+        android:id="@+id/capstone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/capstone"
         style="@style/ButtonStyle"
         android:background="#E53935"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:onClick="showToast"/>
 
 
 </LinearLayout>
