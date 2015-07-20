@@ -10,7 +10,7 @@
     <string name="materialize">xyz reader</string>
     <string name="capstone">Capstone: my own</string>
 
-    <string name="toast_message_start">This button will launch my </string>
+    <string name="toast_message_beginning">This button will launch my </string>
     <string name="toast_message_end"> app!</string>
 
 

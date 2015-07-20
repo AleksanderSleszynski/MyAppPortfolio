@@ -8,23 +8,42 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    Toast toast;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
     }
 
+    /**
+     * toastMessage creating text message
+     * @param appName apliction name
+     * @return toastText app name with beginning and end message.
+     */
     public String toastMessage(String appName){
-        String toastText = getString(R.string.toast_message_start) + " " + appName + " " + getString(R.string.toast_message_end);
+        String toastText = getString(R.string.toast_message_beginning) + " " + appName + " " + getString(R.string.toast_message_end);
         return toastText ;
     }
 
+    /**
+     * displayToast create Toast which correct text.
+     *
+     * @param appName  app Name that will be show in Toast message
+     */
     public void displayToast(String appName){
-        Toast toast = Toast.makeText(this, toastMessage(appName),Toast.LENGTH_SHORT);
+        // Add to cancel Toast if previous toast is still showing and I want to show next.
+        if(toast != null){
+            toast.cancel();
+        }
+        toast = Toast.makeText(this, toastMessage(appName),Toast.LENGTH_SHORT);
         toast.show();
     }
 
+    /**
+     * showToast showing choose correct Toast message on button click.
+     *
+     */
     public void showToast(View view){
         switch (view.getId()){
             case R.id.media_streamer:
