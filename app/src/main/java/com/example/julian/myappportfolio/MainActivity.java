@@ -2,8 +2,6 @@ package com.example.julian.myappportfolio;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -17,65 +15,41 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
     public String toastMessage(String appName){
-        String toastText = "This button will launch my " + appName + " app!";
+        String toastText = getString(R.string.toast_message_start) + " " + appName + " " + getString(R.string.toast_message_end);
         return toastText ;
     }
 
     public void displayToast(String appName){
-        Toast toast = Toast.makeText(getApplicationContext(),toastMessage(appName),Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(this, toastMessage(appName),Toast.LENGTH_SHORT);
         toast.show();
     }
-
 
     public void showToast(View view){
         switch (view.getId()){
             case R.id.media_streamer:
-                displayToast("Spotify Streamer");
+                displayToast(getString(R.string.media_streamer));
                 break;
 
             case R.id.super_duo1:
-                displayToast("Scores App");
+                displayToast(getString(R.string.super_duo1));
                 break;
 
             case R.id.super_duo2:
-                displayToast("Library App");
+                displayToast(getString(R.string.super_duo2));
                 break;
 
             case R.id.ant_terminator:
-                displayToast("Build it Bigger");
+                displayToast(getString(R.string.ant_terminator));
                 break;
 
             case R.id.materialize:
-                displayToast("XYZ Reader");
+                displayToast(getString(R.string.materialize));
                 break;
 
             case R.id.capstone:
-                displayToast("Capstone");
+                displayToast(getString(R.string.capstone));
                 break;
         }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }

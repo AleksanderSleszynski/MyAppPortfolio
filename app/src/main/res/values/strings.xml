@@ -4,11 +4,14 @@
     <string name="my_title">My Nanodegree Apps!</string>
     <string name="action_settings">Settings</string>
     <string name="media_streamer">Spotify streamer</string>
-    <string name="super_duo1">Scores app</string>
-    <string name="super_duo2">Library app</string>
+    <string name="super_duo1">Scores</string>
+    <string name="super_duo2">Library</string>
     <string name="ant_terminator">Build it Bigger</string>
     <string name="materialize">xyz reader</string>
-    <string name="capstone">Capstone: my own app</string>
+    <string name="capstone">Capstone: my own</string>
+
+    <string name="toast_message_start">This button will launch my </string>
+    <string name="toast_message_end"> app!</string>
 
 
 </resources>
