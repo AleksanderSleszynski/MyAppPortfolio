@@ -41,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * showToast showing choose correct Toast message on button click.
-     *
+     * showToast showing choose correct Toast message on button click. 
+     * Test
      */
     public void showToast(View view){
         switch (view.getId()){
